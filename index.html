@@ -26,16 +26,16 @@
     </header>
 
     <section class="hero">
-        <h1 class="hero-copy"><br></h1>
+        <h1 class="hero-copy">アカデミックな<br>モノづくりを</h1>
     </section>
     
     <section class="profile">
         <h1 class="profile_title">Profile</h1>
-        <img src="" alt="" class="profile-img">
+        <img src="image/myphoto.jpg" alt="profile_img" class="profile-img">
         <table>
-            <!-- ド派手太文字で写真に名前とか被せる -->
+            
             <tr>
-                <th>Name</th> <td>Kato Haruki</td>
+                <th>Name</th> <td>加藤 春樹</td>
             </tr>
             <tr>
                 <th>Date of Birth</th> <td></td>
@@ -56,32 +56,48 @@
     </section>
     <section class="works">
         <h1 class="works_title">Works</h1>
+        <!-- 画像にカーソル合わせると浮き上がり、タッチすると下に説明文が伸びる -->
         <div class="works_container">
-            <img src="image/GalaxyMan.mov" alt="myworks maya" class="works_img">
-            <p>
-            Autodesk Mayaを使い、ロボットを制作しアニメーションを付与した。
+            <video playsinline muted autoplay src="image/GalaxyMan.mov" alt="myworks Maya" class="works_mov" loop></video>
+            <h3 class="works_app">Autodesk Maya</h3>
+            <h2 class="works_title">vsss. Galaxy Man</h2>
+            <h4 class="works_day">2024.1.24</h4>
+            <p class="works_about">
+                ロックマン9に登場するロボットを制作し、アニメーションを付与した。<br>
+                5時間かけて制作。
             </p>
             <a href="#" class="button">Lead more</a>
         </div>
         <div class="works_container">
-            <!-- 画像にカーソル合わせると浮き上がり、タッチすると下に説明文が伸びる -->
             <img src="image/konshoku.jpg" alt="myworks illustrator" class="works_img">
-            <p>
-            
+            <h3 class="works_app">Adobe Illustrator</h3>
+            <h2 class="works_title">減法混色と加法混色</h2>
+            <h4 class="works_day">2023.7.10</h4>
+            <p class="works_about">
+                RGBとCMYKを簡単に説明する図を制作。<br>
+                3時間かけて制作。
             </p>
             <a href="#" class="button">Lead more</a>
         </div>
         <div class="works_container">
             <img src="image/fragrance.jpg" alt="myworks color" class="works_img">
-            <p>
-            
+            <h3 class="works_app">ペン、パステル、修正ペン</h3>
+            <h2 class="works_title">Cosmetics</h2>
+            <h4 class="works_day">2023.11.17</h4>
+            <p class="works_about">
+                手書きでの工業デザインの表現を学んだ。<br>
+                6時間かけて制作。
             </p>
             <a href="#" class="button">Lead more</a>
         </div>
         <div class="works_container">
             <img src="image/jaguchi.jpg" alt="myworks dessin" class="works_img">
-            <p>
-            
+            <h3 class="works_app">Staedtler pencils</h3>
+            <h2 class="works_title">Faucet</h2>
+            <h4 class="works_day">2023.12.22</h4>
+            <p class="works_about">
+                鉛筆での工業デザインの表現を学んだ。<br>
+                6時間かけて制作。
             </p>
             <a href="#" class="button">Lead more</a>
         </div>
@@ -92,19 +108,20 @@
         </div>
         <nav class="map_content">
             <ul class="map_list">
-              <li class="map_title"><h3>Site Map</h3></li>
+              <li class="title"><h3>Site Map</h3></li>
               <li class="map_item"><a href="#TOP">TOP</a></li>
               <li class="map_item"><a href="#PROFILE">PROFILE</a></li>
               <li class="map_item"><a href="#WORKS">WORKS</a></li>
               <li class="map_item"><a href="#CONTACT">CONTACT</a></li>
             </ul>
         </nav>
+        <hr>
         <nav class="contact-content">
             <ul class="contact-list">
-                <li class="contact-title"><h3>Contact</h3></li>
+                <li class="title"><h3>Contact</h3></li>
+                <li class="contact-item"><a href="https://x.com" class="X"><img src="image/twitter_icon.svg" alt="Xicon" height="12px">X</a></li>
                 <li class="contact-item"><a href="mailto:x23030xx@aitech.ac.jp" class="mail"><img src="image/mail_icon.svg" alt="Mailicon" height="12px">Mail</a></li>
                 <li class="contact-item"><a href="https://www.instagram.com" class="instagram"><img src="image/insta_icon.svg" alt="Instagramicon" height="12px">Instagram</a></li>
-                <li class="contact-item"><a href="https://x.com" class="X"><img src="image/twitter_icon.svg" alt="Xicon" height="12px">X</a></li>
             </ul>
         </nav>
     </section>
