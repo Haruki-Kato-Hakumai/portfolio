@@ -5,21 +5,37 @@
     font-family: "BIZ UDPGothic", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: rgb(245, 245, 240);
 }
-
+:root,
+html {
+  /* スムーススクロール用 */
+  scroll-behavior: smooth;
+  --white1: rgb(255,255,255);
+  --white2: rgb(245, 245, 240);
+  --white3: rgb(200, 215, 215);
+  --black1: rgb(0, 0, 0);
+  --black2: rgb(30, 30, 30);
+  --black3: rgba(0, 0, 0, 0.8);
+  --black4: rgba(0, 0, 0, 0.5);
+  --clear1: rgba(0,0,0,0);
+  --base-bg: var(--white2);
+  --text-color: var(--black2);
+}
+body{
+    background-color: var(--base-bg);
+}
 .header{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 30px;
-    background: rgba(255, 255, 255, 1);
+    background: var(--white1);
     position: relative;
 }
 .mylogo{
-    width: 50px;
+    width: 45px;
     height: auto;
-    padding: 5px;
+    margin: 5px;
 }
 .drawer_hidden{
     display: none;
@@ -42,7 +58,7 @@
     height: 5px;
     width: 35px;
     border-radius: 4px;
-    background: rgba(0, 0, 0, 1);
+    background: var(--black1);
     transition: 0.5s;
     position: absolute;
 }
@@ -53,20 +69,18 @@
     top: 12px;/* 三本線の一番下の棒の位置調整 */
 }
 #drawer_input:checked ~ .drawer_open span {
-    background: rgba(255, 255, 255, 0);/* アイコンがクリックされたら真ん中の線を透明にする */
+    background: var(--clear1);/* アイコンがクリックされたら真ん中の線を透明にする */
 }
 #drawer_input:checked ~ .drawer_open span::before {/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
     bottom: 0;
     transform: rotate(45deg);
-    background: rgba(255, 255, 255, 1);
+    background: var(--white1);
 }
 #drawer_input:checked ~ .drawer_open span::after {
     top: 0;
     transform: rotate(-45deg);
-    background: rgba(255, 255, 255, 1);
+    background: var(--white1);
 }
-    
-
 .nav_content {
     width: 100%;
     height: 100%;
@@ -74,33 +88,33 @@
     top: 0%;
     left: 100%;
     z-index: 99;
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--black2);
     transition: .5s;
     text-align: center;
     padding-top: 50px;
-  }
-  #drawer_input:checked ~ .nav_content {
+}
+#drawer_input:checked ~ .nav_content {
     left: 0;  /* アイコンがクリックされたらメニューを表示 */
-  }
-  .nav_list {
+}
+.nav_list {
     list-style: none;  /* メニュー黒ポチを消す */
-    background-color: rgb(0, 0, 0, 0);
-  }
-  .nav_item{
-    background-color: rgb(0, 0, 0, 0);
-  }
-  .nav_item a {
-    color: rgba(255, 255, 255, 1);
-    background-color: rgb(0, 0, 0, 0);
+    background-color: var(--clear1);
+}
+.nav_item{
+    background-color: var(--clear1);
+}
+.nav_item a {
+    color: var(--white1);
+    background-color: var(--clear1);
     font-size: 2rem;
     font-weight: bold;
     line-height: 2;
     text-decoration: none;
-  }
- .nav_item a:hover{
+}
+.nav_item a:hover{
     text-decoration: underline;
-  }
-
+}
+  
 .hero{
     display: flex;
     flex-flow: column;
@@ -114,74 +128,258 @@
     background-repeat: no-repeat;
 }
 .hero .hero-copy{
-    color: rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255, 0);
+    color: rgb(60, 100, 150);
+    background-color: var(--clear1);
     text-align: end;
     font-weight: bold;
-    font-size: 300%;/*500pxメディアクアリ*/
+    font-size: 250%;/*500pxメディアクアリ*/
     top: 25%;
     right: 2%;/*10%メディアクアリ*/
     position: absolute;
     margin-left: auto;
 }
+@media screen and (min-width: 600px) {
+    .hero{
+        display: flex;
+        flex-flow: column;
+        padding-bottom: 750px;/*750pxメディアクアリ*/
+        margin-bottom: 300px;
+        width: 100vw;
+        height: 80%;
+        background-image: url(image/sora.png);
+        background-size: cover;
+        background-position-x: 60%;
+        background-repeat: no-repeat;
+    }
+    .hero .hero-copy{
+        color: rgb(60, 100, 150);
+        background-color: var(--clear1);
+        text-align: end;
+        font-weight: bold;
+        font-size: 450%;/*500pxメディアクアリ*/
+        top: 30%;
+        right: 2%;
+        position: absolute;
+        margin-left: auto;
+    }
+}
+
 .profile{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    background-color: var(--white3);
+}
+.profile h1{
+    font-size: 2.5rem;
+    margin: 20px 0 50px;
+    background-color: var(--white3);
+}
+
+.profile img{
+    width: 300px;
+}
+.profile table{
+    margin: 30px 0 50px;
+    padding: 10px;
+    background-color: var(--white2);
+    border: 1px solid var(--white3);
+    border-radius: 5px;
+    
 }
 .profile th,td{
-    display: flex;
+    padding: 5px 25px 5px;
+    border: 1px solid var(--white3);
 }
+@media screen and (min-width: 600px) {
+    .profile{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: var(--white3);
+    }
+    .profile h1{
+        font-size: 2.5rem;
+        margin: 5px 0 50px;
+        background-color: var(--white3);
+    }
+    .profile img{
+        width: 300px;
+    }
+    .profile table{
+        margin: 30px 0 50px;
+        padding: 10px;
+        background-color: var(--white2);
+        border: 1px solid var(--white3);
+        border-radius: 5px;
+    }
+    .profile th,td{
+        padding: 5px 25px 5px;
+        border: 1px solid var(--white3);
+    }
+}
+
+
 
 .works{
     display: flex;
     flex-direction: column;
     text-align: center;
 }
+.works h1{
+    margin: 100px 0 150px;
+    font-size: 2.5rem;
+}
 .works img{
+    padding-top: 20px;
+    margin-bottom: 15px;
     width: 300px;
 }
 .works video{
+    padding-top: 20px;
+    margin-bottom: 15px;
     width: 300px;
 }
+.works_container{
+    border-radius: 5px;
+    background-color: var(--white1);
+    margin: 0 auto 50px auto;
+    max-width: 350px;
+    padding: 5px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.works_container h3{
+    color: var(--black2);
+    font-size: 0.9rem;
+    padding-right: 15px;
+    text-align: end;
+}
+.works_container h4{
+    color: var(--black4);
+    font-size: 0.8rem;
+    padding-right: 15px;
+    text-align: end;
+}
+.works_container h2{
+    color: var(--black2);
+    font-size: 2rem;
+    margin: 15px 20px;
+}
+.works_container p{
+    color: var(--black1);
+    padding: 0 20px 20px;
+    font-size: rem;
+    text-align: start;
+}
+
+.button{
+    color: var(--black2);
+    border: solid var(--black2);
+    background-color: var(--white2);
+    font-size: 1.2rem;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    max-width: 100%;
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    margin: 30px 0 20px 0;
+}
+@media screen and (min-width: 600px) {
+    .works{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        text-align: center;
+    }
+    .works h1{
+        margin: 100px auto 150px;
+        font-size: 2.5rem;
+        width: 100%;
+    }
+    .works img{
+        padding-top: 20px;
+        margin-bottom: 15px;
+        width: 300px;
+    }
+    .works video{
+        padding-top: 20px;
+        margin-bottom: 15px;
+        width: 300px;
+    }
+    .works_container{
+        width: 50%;
+        border-radius: 5px;
+        background-color: var(--white1);
+        margin: 0 auto 50px auto;
+        max-width: 350px;
+        padding: 5px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+
 
 .list{
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 100px;
 }
-
+.list .logo{
+    margin: 100px 0 60px;
+}
+.list .logo a{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.list .mylogo2{
+    margin: 0 10px 0;
+}
 .list .title{
+    font-weight: bold;
     font-size: 1.2rem;
-    padding: 40px 0 20px;
+    margin-bottom: 20px;
 }
-ul {
+.list ul {
     list-style: none;
-    padding: 10px;
 }
-
 .list a{
-    color: rgb(30, 30, 30);
+    color: var(--black2);
     text-decoration: none;
-    line-height: 40px;
+    line-height: 30px;
 }
 hr{
-    margin: 30px 20% 0 20%;
-    border-top: 1px solid rgb(30, 30, 30);
+    margin: 70px 20% 50px 20%;
+    border-top: 1px solid --black2;
 }
+
+
+
 
 footer{
     background-color: rgba(50, 50, 50);
     width: 100%;
     display: flex;
-    margin: 4rem 0 auto 0;
-    height: 3rem;
-    padding: 4rem;
+    margin: 40px 0 auto 0;
+    height: 50px;
+    padding: 70px;
     text-align: center;
     flex-direction: column;
     justify-content: center;
 }
 footer p{
-    color: rgba(255, 255, 255, 1);
+    color: var(--white1);
     background-color: rgba(50, 50, 50);
 }
