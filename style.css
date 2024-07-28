@@ -15,7 +15,7 @@ html {
   --white3: rgb(200, 215, 215);
   --black1: rgb(0, 0, 0);
   --black2: rgb(30, 30, 30);
-  --black3: rgba(0, 0, 0, 0.8);
+  --black3: rgba(0, 0, 0, 0.7);
   --black4: rgba(0, 0, 0, 0.5);
   --clear1: rgba(0,0,0,0);
   --base-bg: var(--white2);
@@ -174,10 +174,12 @@ body{
 }
 .profile h1{
     font-size: 2.5rem;
-    margin: 20px 0 50px;
+    margin: 30px 0 50px;
     background-color: var(--white3);
 }
-
+.profile .spacer{
+    display: none;
+}
 .profile img{
     width: 300px;
 }
@@ -198,14 +200,15 @@ body{
     .profile{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
         justify-content:center;
         text-align: center;
-        flex-wrap: wrap;
         background-color: var(--white3);
+        margin: 0 2% 0;
     }
     .profile h1{
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin: 5px 0 50px;
         background-color: var(--white3);
     }
@@ -224,9 +227,9 @@ body{
         padding: 5px 25px 5px;
         border: 1px solid var(--white3);
     }
-    .spacer {
-        width: 100%
-      }
+    .profile .spacer{
+        width: 100%;
+    }
 }
 
 
@@ -250,7 +253,7 @@ body{
     margin-bottom: 15px;
     width: 300px;
 }
-.spacer {
+.works .spacer{
     display: none;
   }
 .works_container{
@@ -269,6 +272,8 @@ body{
     font-size: 0.9rem;
     padding-right: 15px;
     text-align: end;
+    text-decoration: underline 2px rgb(78, 165, 220);
+
 }
 .works_container h4{
     color: var(--black4);
@@ -278,7 +283,7 @@ body{
 }
 .works_container h2{
     color: var(--black2);
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 15px 20px;
 }
 .works_container p{
@@ -312,14 +317,15 @@ body{
         justify-content:center;
         text-align: center;
         flex-wrap: wrap;
+        padding: 50px;
     }
-    .spacer {
-        width: 100%
-      }
+    .work .spacer{
+        width: 100%;
+    }
     .works h1{
         margin: 100px auto 150px;
-        padding: 100px;
-        font-size: 2.5rem;
+        padding: 80px;
+        font-size: 3rem;
         width: 100%;
     }
     .works img{
