@@ -212,11 +212,8 @@ body{
 @media screen and (min-width: 600px) {
     .profile{
         display: flex;
-        flex-direction: row;
+        flex-direction:row;
         flex-wrap: wrap;
-        align-items: center;
-        justify-content:center;
-        text-align: center;
         background-color: var(--white3);
         margin: 0 2% 0;
     }
