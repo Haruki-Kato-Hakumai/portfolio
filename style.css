@@ -363,7 +363,7 @@ body{
         padding: 5px;
         width: 100%;
     }
-    .works_container h3{
+    .works_container .works_app{
         color: var(--black2);
         font-size: 0.9rem;
         padding-right: 15px;
