@@ -282,7 +282,7 @@ body{
     font-size: 10rem;
     padding-right: 15px;
     text-align: end;
-    text-decoration: underline 2px rgb(78, 165, 220);
+    text-decoration: underline 2px rgb(80, 165, 220);
 }
 .works_container h4{
     color: var(--black4);
