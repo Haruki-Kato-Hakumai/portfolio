@@ -137,6 +137,7 @@ body{
     right: 2%;/*10%メディアクアリ*/
     position: absolute;
     margin-left: auto;
+    animation: slide 1s ease-out;
 }
 @media screen and (min-width: 600px) {
     .hero{
@@ -161,8 +162,20 @@ body{
         right: 2%;
         position: absolute;
         margin-left: auto;
+        animation: slide 1s ease-out;
     }
 }
+@keyframes slide {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
 
 .profile{
     display: flex;
@@ -327,6 +340,10 @@ body{
         padding: 80px;
         font-size: 3rem;
         width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        text-align: center;
     }
     .works img{
         padding-top: 20px;
