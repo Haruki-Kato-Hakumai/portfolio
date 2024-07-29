@@ -279,11 +279,10 @@ body{
 }
 .works_container h3{
     color: var(--black2);
-    font-size: 0.9rem;
+    font-size: 10rem;
     padding-right: 15px;
     text-align: end;
     text-decoration: underline 2px rgb(78, 165, 220);
-
 }
 .works_container h4{
     color: var(--black4);
@@ -301,6 +300,9 @@ body{
     padding: 0 20px 20px;
     font-size: rem;
     text-align: start;
+}
+.works_end{
+    display: none;
 }
 
 .button{
@@ -360,6 +362,24 @@ body{
         max-width: 350px;
         padding: 5px;
         width: 100%;
+    }
+    .works_container h3{
+        color: var(--black2);
+        font-size: 0.9rem;
+        padding-right: 15px;
+        text-align: end;
+        text-decoration: underline 2px rgb(78, 165, 220);
+    }
+    .works_container h4{
+        color: var(--black4);
+        font-size: 0.8rem;
+        padding-right: 15px;
+        text-align: end;
+    }
+    .works_container h2{
+        color: var(--black2);
+        font-size: 1.8rem;
+        margin: 15px 20px;
     }
 }
 
