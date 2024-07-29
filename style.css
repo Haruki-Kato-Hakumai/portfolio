@@ -307,12 +307,12 @@ body{
 
 .button{
     color: var(--black2);
-    border: solid var(--black2);
+    border: 1px solid var(--black2);
     background-color: var(--white1);
     font-size: 1.2rem;
     position: relative;
     padding: 10px;
-    border-radius: 2px;
+    border-radius: 5px;
     text-decoration: none;
     max-width: 100%;
     width: 200px;
