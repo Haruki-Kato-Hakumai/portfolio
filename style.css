@@ -277,12 +277,12 @@ body{
     align-items: center;
     flex-wrap: wrap;
 }
-.works_container h3{
+.works_container .works_app{
     color: var(--black2);
     font-size: 0.9rem;
     padding-right: 15px;
     text-align: end;
-    text-decoration: underline 2px rgb(80, 165, 220);
+    text-decoration: underline 2px rgb(78, 165, 220);
 }
 .works_container h4{
     color: var(--black4);
